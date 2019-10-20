@@ -3,7 +3,7 @@ PSR-4 Autoloader Package
 
 ## Usage
 ```php
-require '/path/to/autoload/bootstrap.php'
+require '/path/to/autoload/Bootstrap.php'
 
 $class = new VendorNamespace\ClassName();
 
