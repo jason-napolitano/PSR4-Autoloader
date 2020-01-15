@@ -11,7 +11,7 @@ abstract class Autoloader
      * @var array $psr4
      */
     public static array $psr4 = [
-        'VendorNamepsace' => __DIR__ . '/src',
+        // ...
     ];
 
     /**
@@ -54,8 +54,8 @@ abstract class Autoloader
         // Iterate through the PSR4 classmap array
         $classmap = array_filter(self::$classmap);
         if ( ! empty($classmap) ) {
-            foreach ( self::$classmap as $class) {
-                self::requireFiles(strpos($class, '.php')? $class: $class . '.php');
+            foreach ( self::$classmap as $class => $file) {
+                self::requireFiles(strpos($file, '.php')? $file: $file . '.php');
             }
         }
     }
