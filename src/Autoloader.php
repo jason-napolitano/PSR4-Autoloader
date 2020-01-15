@@ -53,9 +53,9 @@ abstract class Autoloader
         }
         // Iterate through the PSR4 classmap array
         $classmap = array_filter(self::$classmap);
-        if ( ! empty($classmap) && class_exists($classmap) ) {
-            foreach ( self::$classmap as $class ) {
-                self::requireFiles($class . '.php');
+        if ( ! empty($classmap) ) {
+            foreach ( self::$classmap as $class) {
+                self::requireFiles(strpos($class, '.php')? $class: $class . '.php');
             }
         }
     }
