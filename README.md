@@ -12,10 +12,11 @@ Then register new namespaces and classmaps in their respective `$psr4` and `$cla
 
 ```php
 $psr4 = [
-  'NamespaceName' => '/path/to/directory'
+  'NamespaceName' => 'path/to/directory'
 ];
 
 $classmap = [
-  '\Namespace\Classname' => 'path/to/class/file.php'
+  '\Namespace\Classname' => 'path/to/class/file.php', // Using the '.php` extension
+  '\Namespace\Classname' => 'path/to/class/file'      // Without the '.php` extension
 ];
 ```
